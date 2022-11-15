@@ -19,6 +19,7 @@ public abstract class Pessoa implements Banco{
 	public Pessoa(String nome, String lastname, String email, String telefone, String nascimento, String inscricaoS, String dataA) {
 		this.id = Counter.proximoId();
 		this.nome = nome;
+		this.lastname = lastname;
 		this.email = email;
 		this.nascimento = nascimento;
 		this.telefone = telefone;
@@ -28,6 +29,7 @@ public abstract class Pessoa implements Banco{
 	public Pessoa(String nome, String lastname, String email, String telefone, String nascimento, double notaF, String inscricaoS, String dataA) {
 		this.id = Counter.proximoId();
 		this.nome = nome;
+		this.lastname = lastname;
 		this.email = email;
 		this.nascimento = nascimento;
 		this.telefone = telefone;

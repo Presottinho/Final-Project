@@ -65,6 +65,8 @@ public class Service {
 				String nascimento = pessoaF.getNascimento();
 				String inscricaoS = pessoaF.getInscricaoS();
 				System.out.println("Cadastro encontrado.");
+				System.out.println(lastname);
+				System.out.println(pessoaF.getLastname());
 				this.atualizarDados(pessoaF, null, nome, lastname, email, telefone, nascimento, notaF, inscricaoS);
 			}
 			
@@ -96,7 +98,7 @@ public class Service {
 		String nome = teclado.nextLine();
 		System.out.println("*Digite seu último nome: ");
 		String lastname = teclado.nextLine();
-		System.out.println("*Digite seu telefone: ");
+		System.out.println("*Digite seu telefone(Tudo junto): ");
 		String telefone = teclado.nextLine();
 		System.out.println("*Digite sua data de nascimento: ");
 		String nascimento = teclado.nextLine();
@@ -149,6 +151,7 @@ public class Service {
 					
 		}
 				break;
+				
 			case 2:
 				
 				if(pessoaF != null) {
@@ -207,7 +210,7 @@ public class Service {
 				
 				if(pessoaF != null) {
 					
-					System.out.println("Digite o dado atualizado: ");
+					System.out.println("Digite o dado atualizado(Todos números juntos): ");
 					telefone = teclado.next();
 					String dataA = dataAtual.getDateTime().toString();
 					pessoaService.atualizarPessoaF(nome, lastname, email, telefone, nascimento, inscricaoS, dataA);
@@ -219,7 +222,7 @@ public class Service {
 					
 				}else if(aluno != null) {
 					
-					System.out.println("Digite o dado atualizado: ");
+					System.out.println("Digite o dado atualizado(Todos números juntos): ");
 					telefone = teclado.next();
 					String dataA = dataAtual.getDateTime().toString();
 					alunoService.atualizarAluno(nome, lastname, email, telefone, nascimento, notaF, inscricaoS, dataA);
